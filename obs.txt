@@ -1,0 +1,28 @@
+- Abstração
+    Transformar um problema do mundo real para o contexto da programação
+    Abstrair algo significa esconder os detalhes da implementação dentro de algo – às vezes um protótipo, às vezes em uma função. Portanto, quando você chama a função, não precisa entender exatamente o que ela está fazendo.
+
+Um exemplo claro do conceito de abstração seria o funcionamento de um carro. Quando acionamos ele para ligar, não precisamos saber quais passos ele faz para colocar o motor em funcionamento. Quando acionamos o freio, não precisamos saber todos os mecanismos que são acionados para fazer o carro frear. Apenas sabemos o que cada objeto ou função do carro produz como resultado.
+
+Voltando para a codificação, se você tivesse que entender cada função em uma base de código grande, você nunca codificaria nada, pois, levaria meses para terminar de ler e entender a lógica de tudo isso.
+
+- Emcapsulamento
+    A definição de encapsulamento é "a ação de colocar algo dentro ou como se estivesse em uma cápsula". Remover o acesso a partes do seu código e tornar as coisas privadas é exatamente o que o Encapsulamento faz (muitas vezes, as pessoas se referem a ele como "ocultação de dados").
+
+Encapsulamento significa que o código de cada objeto deve controlar apenas seu próprio estado.  Se você não sabe o que é o estado de um objeto, vamos fazer a seguinte analogia:
+
+Sabe aquele retrato de família, em que você era bebê ainda? Ele é um registro do estado "instantâneo" em que você estava naquele exato momento. De lá pra cá muita coisa mudou, e se hoje você tirar uma nova foto, seu estado já não é o mesmo que aquele. Aquilo que você fez durante o tempo com sua vida, transformou você. A mesma coisa ocorre com o objeto.
+
+O estado é o "instantâneo" atual do objeto. Todas as chaves e métodos (funções) de um objeto são suas propriedades. Se você redefinir ou excluir uma chave, por exemplo, estará alterando o seu estado.
+
+Por isso, é importante limitar o acesso de quais partes do código podem ser acessadas. Caso não sejam necessárias, torne as coisas mais inacessíveis para não possibilitar efeitos colaterais no estado do objeto.
+- Herança
+
+- Polimorfismo
+
+
+# Classe
+- Atributos
+    São informações sobre o item em questão, por exemplo, uma classe carro poderia ter roda, porta e motor
+- Métodos
+    É uma ação do item em questão, a classe carro poderia ter como método correr e buzinar
