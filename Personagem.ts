@@ -1,4 +1,4 @@
-export default class Personagem {
+export class Personagem {
   constructor(
     private _nome: string,
     private energia: number,

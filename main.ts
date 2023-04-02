@@ -1,5 +1,5 @@
 import prompt from "prompt-sync";
-import Personagem from "./Personagem";
+import { Personagem } from "./Personagem";
 
 let person: Personagem = new Personagem("Sansa Stark", 100, 40, 20, 20);
 
