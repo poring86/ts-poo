@@ -1,50 +1,54 @@
-import prompt from 'prompt-sync';
-
-class Personagem {
+export default class Personagem {
   constructor(
     public nome: string,
     public energia: number,
     public vida: number,
     public ataque: number,
     public defesa: number
-  ) {
+  ) {}
+
+  status() {
+    const obj = {
+      nome: this.nome,
+      energia: this.energia,
+      vida: this.vida,
+      ataque: this.ataque,
+      defesa: this.defesa,
+    };
+
+    return obj;
   }
-}
 
-let person: Personagem = new Personagem("Sansa Stark", 100, 40, 20, 20);
-
-let teclado = prompt();
-let option: number = 0;
-
-while (option != 9) {
-    console.log("+========= Personagem =============+");
-    console.log("|1. Treinar ataque                 |");
-    console.log("|2. Treinar defesa                 |");
-    console.log("|3. Descansar                      |");
-    console.log("|4. Entrar em batalha              |")
-    console.log("|8. Imprimir atributos             |")
-    console.log("|9. Sair                           |");
-    console.log("+==================================+");
-
-    option = +teclado("Escolha uma ação");
-    console.log('passou', option);
-
-    switch (option) {
-        case 1:
-            person.ataque += Math.random() * 7;
-            person.energia -= Math.random() * 10
-            break;
-        case 2:
-            person.defesa += Math.random() * 5
-            person.energia -= Math.random() * 10
-            break;
-        case 3:
-            person.energia += Math.random() * 10
-            break
-        case 8:
-            console.log("person :>>", person)
-            break
-        default:
-            break;
+  treinarAtaque(): void {
+    this.ataque += Math.random() * 7;
+    this.energia -= Math.random() * 10;
+    this.isDead();
+    if (this.ataque > 100) {
+      this.ataque = 100;
     }
+  }
+  treinarDefesa(): void {
+    this.defesa += Math.random() * 5;
+    this.energia -= Math.random() * 10;
+    this.isDead();
+    if (this.defesa > 100) {
+      this.defesa = 100;
+    }
+  }
+
+  descansar(horas: number): void {
+    this.energia += horas * Math.random() * 10;
+    this.isDead();
+    if (this.energia > 100) {
+      this.energia = 100;
+    }
+  }
+  batalhar(): number {
+    let desgaste = Math.random() * 100;
+    this.energia -= desgaste;
+    return desgaste;
+  }
+  isDead(): boolean {
+    return this.energia > 0;
+  }
 }
